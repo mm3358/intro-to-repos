@@ -11,7 +11,6 @@ from my_lib.my_funcs import *
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Using `%run` allows you to execute a Databricks notebook in the current SparkSession, bringing any imported modules, declared variables, or defined functions into the current scope.
 # MAGIC 
 # MAGIC Note that Databricks Python notebooks are stored as normal Python files with the first line
 # MAGIC 
@@ -20,10 +19,6 @@ from my_lib.my_funcs import *
 # MAGIC ```
 # MAGIC 
 # MAGIC The Databricks web app searches for this line when syncing changes with the remote repository and will render Python scripts as single cell notebooks automatically.
-
-# COMMAND ----------
-
-# MAGIC %run ./my_lib/my_funcs
 
 # COMMAND ----------
 
@@ -52,3 +47,12 @@ display(df.select(roundedTemp("unit", "temp")))
 # COMMAND ----------
 
 display(df.select(convertFtoC("unit", "temp")))
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC This is a new comment 
+
+# COMMAND ----------
+
+df.count()
